@@ -6,7 +6,77 @@ using System.Threading.Tasks;
 
 namespace Assignment3
 {
-    class Planet
+    public abstract class Planet
     {
+        //create private fields here
+        private double _diameter;
+        private double _mass;
+        private int _moonCount;
+        private string _name;
+        private double _orbitalPeriod;
+        private int _ringCount;
+        private double _rotationPeriod;
+
+        //create public properties here
+        public double Diameter { get; }
+        public double Mass { get; }
+        public int MoonCount
+        { 
+            get
+            {
+                return _moonCount;
+            }
+            set
+            {
+                _moonCount = value;
+            }
+        }
+        public string Name { get; }
+        public double OrbitalPeriod
+        {
+            get
+            {
+                return _orbitalPeriod;
+            }
+            set
+            {
+                _orbitalPeriod = value;
+            }
+        }
+        public int RingCount
+        {
+            get
+            {
+                return _ringCount;
+            }
+            set 
+            {
+                _ringCount = value;
+            }
+        }
+        public double RotationPeriod
+        {
+            get
+            {
+                return _rotationPeriod;
+            }
+            set
+            {
+                _rotationPeriod = value;
+            }
+        }
+
+        //constructor
+        public Planet(string name, double diameter, double mass)
+        {
+            Name = name;
+            Diameter = diameter;
+            Mass = mass;
+        }
+
+        public override string ToString()
+        {
+            return $"Name: {Name} \tDiameter: {Diameter} \tMass: {Mass}\n";
+        }
     }
 }
