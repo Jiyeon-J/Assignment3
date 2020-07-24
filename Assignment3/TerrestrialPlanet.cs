@@ -14,6 +14,7 @@ namespace Assignment3
     */
     class TerrestrialPlanet : Planet, IHabitable, IHasMoons
     {
+        //fields
         private bool _oxygen;
 
         //Methods

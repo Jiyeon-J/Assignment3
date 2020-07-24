@@ -14,6 +14,7 @@ namespace Assignment3
     */
     class GiantPlanet : Planet, IHasMoons, IHasRings
     {
+        //fields
         private string _type;
 
         public GiantPlanet(string name, double diameter, double mass, string type)
@@ -22,6 +23,7 @@ namespace Assignment3
             _type = type;
         }
 
+        //Methods
         public bool HasMoons()
         {
             if(MoonCount>0)
